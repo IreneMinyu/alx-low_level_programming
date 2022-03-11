@@ -12,19 +12,19 @@ int main(void)
 {
 	int i, j;
 
-	i = 97;
-	j = 65;
+	small = 97;
+	capital = 65;
 
-	while (i < 123)
+	while (small < 123)
 	{
-		putchar(i);
-		i++;
+		putchar(small);
+		small++;
 	}
 
-	while (j < 91)
+	while (capital < 91)
 	{
-		putchar(j);
-		j++;
+		putchar(capital);
+		capital++;
 	}
 
 	putchar(10);
