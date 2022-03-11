@@ -10,7 +10,7 @@
 
 int main(void)
 {
-	int i, j;
+	int small, capital;
 
 	small = 97;
 	capital = 65;
