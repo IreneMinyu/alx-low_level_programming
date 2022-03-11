@@ -10,15 +10,15 @@
 
 int main(void)
 {
-	int i = 97;
+	int small = 97;
 
-	while (i < 123)
+	while (small < 123)
 	{
-		if (i != 101 && i != 113)
+		if (small != 101 && small != 113)
 		{
-			putchar(i);
+			putchar(small);
 		}
-		i++;
+		small++;
 	}
 	putchar(10);
 
