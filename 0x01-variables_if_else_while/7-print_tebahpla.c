@@ -1,7 +1,7 @@
 #include <stdio.h>
 
 /**
- * main -program that  print the letters of the alphabet in reverse
+ * main - print the letters of the alphabet
  *
  * Description: print the letters of the alphabet in reverse
  *
@@ -10,14 +10,14 @@
 
 int main(void)
 {
-    int i = 122;
+	int i = 122;
 
-    while (i > 96)
-    {
-        putchar(i);
-        i--;
-    }
-    putchar(10);
+	while (i > 96)
+	{
+		putchar(i);
+		i--;
+	}
+	putchar(10);
 
-    return (0);
+	return (0);
 }
