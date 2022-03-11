@@ -1,7 +1,7 @@
 #include <stdio.h>
 
 /**
- * main - print single digit numbers
+ * main - program that prints single digit numbers
  *
  * Description: print single digit numbers
  *
@@ -10,17 +10,17 @@
 
 int main(void)
 {
-	int i;
+        int num;
 
-	i = 48;
+        num = 48;
 
-	while (i < 58)
-	{
-		putchar(i);
-		i++;
-	}
+        while (num < 58)
+        {
+                putchar(num);
+                num++;
+        }
 
-	putchar(10);
+        putchar(10);
 
-	return (0);
+        return (0);
 }
