@@ -1,40 +1,40 @@
 #include <stdio.h>
 
 /**
- * main - program that prints all possible different combinations of two digits
+ * main - print double digit combos
  *
- * Description: print double digit combos. Digits must be different. Only smallest combination
+ * Description: print double digit combos
  *
  * Return: Always 0 (Success)
  */
 
 int main(void)
 {
-    int i, j;
+	int i, j;
 
-    i = 48;
-    j = 48;
+	i = 48;
+	j = 48;
 
-    while (i < 58)
-    {
-        j = i + 1;
-        while (j < 58)
-        {
-            putchar(i);
-            putchar(j);
+	while (i < 58)
+	{
+		j = i + 1;
+		while (j < 58)
+		{
+			putchar(i);
+			putchar(j);
 
-            if (i < 56 || j < 57)
-            {
-                putchar(44);
-                putchar(32);
-            }
-            j++;
-        }
+			if (i < 56 || j < 57)
+			{
+				putchar(44);
+				putchar(32);
+			}
+			j++;
+		}
 
-        i++;
-    }
+		i++;
+	}
 
-    putchar(10);
+	putchar(10);
 
-    return (0);
+	return (0);
 }
