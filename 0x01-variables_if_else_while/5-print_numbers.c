@@ -10,14 +10,14 @@
 
 int main(void)
 {
-	int i;
+	int num;
 
-	i = 48;
+	num = 48;
 
-	while (i < 58)
+	while (num < 58)
 	{
-		putchar(i);
-		i++;
+		putchar(num);
+		num++;
 	}
 
 	putchar(10);
