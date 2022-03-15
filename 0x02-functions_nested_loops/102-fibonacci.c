@@ -13,7 +13,7 @@ int main(void)
 	num1 = 1;
 	num2 = 2;
 	printf("%ld, %ld", num1, num2);
-	for (count = 0; count < 50; count++)
+	for (count = 0; count < 48; count++)
 	{
 		fibonacci = num1 + num2;
 		printf(", %ld", fibonacci);
