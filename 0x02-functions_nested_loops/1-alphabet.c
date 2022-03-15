@@ -3,7 +3,7 @@
 /**
  * main - print alphabet in lowercase
  *
- * print_alphabet - Prints the alphabet in lowercase.
+ * description: print_alphabet 
  *
  * Return: Always 0 (Success)
  */
