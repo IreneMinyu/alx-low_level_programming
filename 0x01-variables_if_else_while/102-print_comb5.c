@@ -1,48 +1,48 @@
 #include <stdio.h>
 
 /**
- * main - program that prints all possible combinations of two two-digit numbers.
+ * main - print pairs of double digit combos
  *
- * Description: program that prints all possible combinations of two two-digit numbers.
+ * Description: print pairs of double digit combos
  *
  * Return: Always 0 (Success)
  */
 
 int main(void)
 {
-    int first, second, num1, num2;
+	int i, j, k, m;
 
-    first = 48;
-    while (first < 58)
-    {
-        second = 48;
-        while (second < 58)
-        {
-            num2 = second + 1;
-            num1 = first;
-            while (num1 < 58)
-            {
-                while (num2 < 58)
-                {
-                    putchar(first);
-                    putchar(second);
-                    putchar(32);
-                    putchar(num1);
-                    putchar(num2);
-                    if (first < 57 || second < 56 || num1 < 57 || num2 < 57)
-                    {
-                        putchar(44);
-                        putchar(32);
-                    }
-                    num2++;
-                }
-                num2 = 48;
-                num1++;
-            }
-            second++;
-        }
-        first++;
-    }
-    putchar(10);
-    return (0);
+	i = 48;
+	while (i < 58)
+	{
+		j = 48;
+		while (j < 58)
+		{
+			m = j + 1;
+			k = i;
+			while (k < 58)
+			{
+				while (m < 58)
+				{
+					putchar(i);
+					putchar(j);
+					putchar(32);
+					putchar(k);
+					putchar(m);
+					if (i < 57 || j < 56 || k < 57 || m < 57)
+					{
+						putchar(44);
+						putchar(32);
+					}
+					m++;
+				}
+				m = 48;
+				k++;
+			}
+			j++;
+		}
+		i++;
+	}
+	putchar(10);
+	return (0);
 }

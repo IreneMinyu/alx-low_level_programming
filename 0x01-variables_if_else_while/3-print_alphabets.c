@@ -1,7 +1,7 @@
 #include <stdio.h>
 
 /**
- * main - program that prints the alphabet in lowercase, and then in uppercase, followed by a new line.
+ * main - print the letters of the alphabet
  *
  * Description: print the letters of the alphabet in lower then in uppercase
  *
@@ -10,24 +10,24 @@
 
 int main(void)
 {
-    int i, j;
+	int small, capital;
 
-    i = 97;
-    j = 65;
+	small = 97;
+	capital = 65;
 
-    while (i < 123)
-    {
-        putchar(i);
-        i++;
-    }
+	while (small < 123)
+	{
+		putchar(small);
+		small++;
+	}
 
-    while (j < 91)
-    {
-        putchar(j);
-        j++;
-    }
+	while (capital < 91)
+	{
+		putchar(capital);
+		capital++;
+	}
 
-    putchar(10);
+	putchar(10);
 
-    return (0);
+	return (0);
 }

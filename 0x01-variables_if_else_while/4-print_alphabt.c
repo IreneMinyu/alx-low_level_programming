@@ -1,26 +1,26 @@
 #include <stdio.h>
 
 /**
- * main - program that prints the alphabet in lowercase
+ * main - print the letters of the alphabet
  *
- * Description: print the letters of the alphabet except q, e
+ * Description: print the letters of the alphabet except e, q
  *
  * Return: Always 0 (Success)
  */
 
 int main(void)
 {
-    int i = 97;
+	int small = 97;
 
-    while (i < 123)
-    {
-        if (i != 101 && i != 113)
-        {
-            putchar(i);
-        }
-        i++;
-    }
-    putchar(10);
+	while (small < 123)
+	{
+		if (small != 101 && small != 113)
+		{
+			putchar(small);
+		}
+		small++;
+	}
+	putchar(10);
 
-    return (0);
+	return (0);
 }
