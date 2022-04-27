@@ -1,72 +1,48 @@
 #include "lists.h"
-
 /**
- * free_listp2 - frees a linked list
- * @head: head of a list.
+ *delete_nodeint_at_index - deletes a node at a specified index
+ *in a linked list
+ *@head: pointer to the memory location of the head pointer
+ *@index: index of element to delete
  *
- * Return: no return.
+ *Return: 1 if succeeded, -1 if failed
  */
-void free_listp2(listp_t **head)
+int delete_nodeint_at_index(listint_t **head, unsigned int index)
 {
-	listp_t *temp;
-	listp_t *curr;
+	unsigned int nodes = 0;
 
-	if (head != NULL)
+	listint_t *index1, *index2;
+
+	index1 = *head;
+	index2 = *head;
+
+	if (head == NULL || *head == NULL)
 	{
-		curr = *head;
-		while ((temp = curr) != NULL)
-		{
-			curr = curr->next;
-			free(temp);
-		}
-		*head = NULL;
-	}
-}
-
-/**
- * free_listint_safe - frees a linked list.
- * @h: head of a list.
- *
- * Return: size of the list that was freed.
- */
-size_t free_listint_safe(listint_t **h)
-{
-	size_t nnodes = 0;
-	listp_t *hptr, *new, *add;
-	listint_t *curr;
-
-	hptr = NULL;
-	while (*h != NULL)
-	{
-		new = malloc(sizeof(listp_t));
-
-		if (new == NULL)
-			exit(98);
-
-		new->p = (void *)*h;
-		new->next = hptr;
-		hptr = new;
-
-		add = hptr;
-
-		while (add->next != NULL)
-		{
-			add = add->next;
-			if (*h == add->p)
-			{
-				*h = NULL;
-				free_listp2(&hptr);
-				return (nnodes);
-			}
-		}
-
-		curr = *h;
-		*h = (*h)->next;
-		free(curr);
-		nnodes++;
+		return (-1);
 	}
 
-	*h = NULL;
-	free_listp2(&hptr);
-	return (nnodes);
+	if (index == 0)
+	{
+		*head = (*head)->next;
+		free(index2);
+		return (1);
+	}
+
+	while (nodes != index)
+	{
+		if (nodes == index - 1)
+		{
+			index1 = index2;
+		}
+		index2 = index2->next;
+
+		if (index2 == NULL)
+		{
+			return (-1);
+		}
+		nodes++;
+	}
+	index1->next = index2->next;
+	free(index2);
+	return (1);
 }
