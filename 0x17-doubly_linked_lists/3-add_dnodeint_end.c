@@ -1,36 +1,33 @@
 #include "lists.h"
 /**
- * add_dnodeint_end - Add node at the end of a list.
- * @head: Is the pointer to the direction of the head
- * @n:The data integer
- * Return: The address of the new element.
+ * add_dnodeint_end - Add a node in the tail
+ * @head: Pointer to direction of the head
+ * @n: The data integer
+ * Return: The direction of the tail node
  */
-
 dlistint_t *add_dnodeint_end(dlistint_t **head, const int n)
 {
-	dlistint_t *newNode, *endPointer;
+	dlistint_t *new_mem, *last_dir;
 
-	newNode = malloc(sizeof(dlistint_t));
+	new_mem = malloc(sizeof(dlistint_t));
 
-	if (newNode == NULL)
+	if (new_mem == NULL)
 		return (NULL);
 
-	newNode->n = n;
-	newNode->next = NULL;
-	/** newNode->prev = NULL;**/
-
+	new_mem->n = n;
+	new_mem->next = NULL;
+	new_mem->prev = NULL;
 	if (*head == NULL)
-		*head = newNode;
-	newNode->prev = NULL;
-	return (newNode);
+	{
+		*head = new_mem;
+		return (new_mem);
+	}
+	last_dir = *head;
 
-	endPointer = *head;
+	while (last_dir->next != NULL)
+		last_dir = last_dir->next;
+	last_dir->next = new_mem;
+	new_mem->prev = last_dir;
 
-	while (endPointer->next != NULL)
-		endPointer = endPointer->next;
-
-	endPointer->next = newNode;
-	newNode->prev = endPointer;
-
-	return (newNode);
+	return (new_mem);
 }
