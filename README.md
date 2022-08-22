@@ -1,2 +1,2 @@
-0x14. C - Bit manipulation
+Programming tasks in C
 
